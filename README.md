@@ -1,4 +1,4 @@
-# Azure-CLI 2.0
+# Azure-CLI 2.0 on Ubuntu Windows Sub-system Linux
 
 ## Install Ubuntu terminal
 
