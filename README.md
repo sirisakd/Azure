@@ -62,6 +62,8 @@ sudo apt-key --keyring /etc/apt/trusted.gpg.d/Microsoft.gpg adv \
 
 ### Install Azure-cli
 
+This step will be very long due to the number of object to unpack
+
 ```{Syntax language, Shell}
 sudo apt-get update
 sudo apt-get install azure-cli
