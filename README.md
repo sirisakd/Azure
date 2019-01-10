@@ -1,8 +1,8 @@
-# Azure
+# Azure-CLI 2.0
 
 ## Install Ubuntu terminal
 
-First we need to activate "Windows Sub-system for Linux" (WSL) via PowerShell
+First we need to activate "Windows Sub-system for Linux" (WSL) via PowerShell (reboot required)
 
 ```{Syntax language, PowerShell}
 Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Windows-Subsystem-Linux
