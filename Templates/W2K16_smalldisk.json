@@ -78,7 +78,10 @@
                             "addressPrefix": "[concat(parameters('addressPefix'),'/16')]",
                             "delegations": [],
                             "privateEndpointNetworkPolicies": "Enabled",
-                            "privateLinkServiceNetworkPolicies": "Enabled"
+                            "privateLinkServiceNetworkPolicies": "Enabled",
+                            "networkSecurityGroup": {
+                                "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgName'))]"
+                            }
                         }
                     }
                 ],
@@ -92,14 +95,10 @@
             "name": "[variables('nicName')]",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgName'))]",
                 "[resourceId('Microsoft.Network/publicIPAddresses', variables('publicIP'))]",
                 "[resourceId('Microsoft.Network/virtualNetworks', variables('vnetName'))]"
             ],
             "properties": {
-                "networkSecurityGroup": {
-                    "id": "[resourceId('Microsoft.Network/networkSecurityGroups', variables('nsgName'))]"
-                },
                 "ipConfigurations": [
                     {
                         "name": "ipconfig1",
